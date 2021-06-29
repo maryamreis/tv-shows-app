@@ -3,7 +3,7 @@ import mapArray from "../episodes.json";
 
 function GetEpisode(): JSX.Element {
   return (
-    <section>
+    <section className = "columns">
       {mapArray.map((ep) => (
         <ShowEpisode
           key={ep.id}

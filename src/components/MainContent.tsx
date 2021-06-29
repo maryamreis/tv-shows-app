@@ -1,6 +1,6 @@
 import GetEpisode from "./GetEpisode";
 
-function MainContent() {
+function MainContent(): JSX.Element {
     return (
         <main>
         <GetEpisode />

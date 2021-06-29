@@ -1,3 +1,5 @@
+
+
 interface IEpisode {
   id: number;
   url: string;
@@ -19,15 +21,15 @@ interface IEpisode {
 
 function ShowEpisode(props: IEpisode): JSX.Element {
   return (
-    <section>
-      <h1>
-        {props.name} - S{props.season}E{props.number}
-      </h1>
-      <p>
-        <img src={props.image.medium} />
-      </p>
-      <p>{props.summary}</p>
-    </section>
+      <section>
+        <h1 className = "title">
+          {props.name} - S{props.season.toString().padStart(2, "0")}E{props.number.toString().padStart(2, "0")}
+        </h1>
+        <p>
+          <img src={props.image.medium} alt=""/>
+        </p>
+        <p>{props.summary.replace(/<p>/g, "").replace(/<\/p>/g, "")}</p>
+      </section>
   );
 }
 

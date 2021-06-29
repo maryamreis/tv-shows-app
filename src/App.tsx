@@ -1,11 +1,14 @@
 import React from "react";
-import episodes from "./episodes.json";
+import mapArray from "./episodes.json";
 import MainContent from "./components/MainContent";
 import Footer from "./components/Footer";
+import Header from "./components/Header"
+import "./App.css"
 
-function App() {
+function App(): JSX.Element {
   return (
     <div>
+      <Header />
       <MainContent />
       <Footer />
     </div>
