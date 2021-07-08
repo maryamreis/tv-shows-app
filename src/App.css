@@ -7,11 +7,20 @@
 }
 
 .columns {
-    border: 1px #2853a3;
+    border: 10px #2853a3;
     padding: 10px;
     display: flex;
-    flex-direction: row;
+    /* grid-template-columns: 1fr 1fr; */
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    /* width: 100% */
+}
 
+.eachEpisode {
+    width: 100%;
+    flex: 1;
+    padding: 10px;
 }
 
 .title{
@@ -20,4 +29,19 @@
     border-color: yellow;
     border-width: 10px
 
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    object-fit: fill;
+    
+}
+
+.picture img {
+    flex-shrink: 0;
+    min-width: 100%;
+    /* max-width: 271px; */
+    min-height: 100%
 }

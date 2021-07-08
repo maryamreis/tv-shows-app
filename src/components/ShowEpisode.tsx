@@ -21,13 +21,13 @@ interface IEpisode {
 
 function ShowEpisode(props: IEpisode): JSX.Element {
   return (
-      <section>
+      <section className = "eachEpisode">
         <h1 className = "title">
           {props.name} - S{props.season.toString().padStart(2, "0")}E{props.number.toString().padStart(2, "0")}
         </h1>
-        <p>
+        <div className = "picture">
           <img src={props.image.medium} alt=""/>
-        </p>
+        </div>
         <p>{props.summary.replace(/<p>/g, "").replace(/<\/p>/g, "")}</p>
       </section>
   );
