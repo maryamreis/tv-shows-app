@@ -1,9 +1,14 @@
 import GetEpisode from "./GetEpisode";
 
-function MainContent(): JSX.Element {
+interface nestedProp {
+    searchTerm: string
+}
+
+function MainContent({searchTerm}: nestedProp): JSX.Element {
     return (
         <main>
-        <GetEpisode />
+        <GetEpisode 
+        searchTerm={searchTerm} />
         </main>
     );
 }
