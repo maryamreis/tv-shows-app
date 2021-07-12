@@ -21,23 +21,14 @@ function SearchBar(props: searchProps): JSX.Element {
                     onChange={(event) => {
                         props.setSearchTerm(event.target.value)}}
                 />
-            </div>
-                
-            {/* <select className="dataResult">
-                {mapArray.filter((ep) => {
-                    if (searchTerm === "") {
-                        return ep
-                    } else if (ep.name.toLowerCase().includes(searchTerm.toLowerCase())) {
-                        return ep
-                    }
-                    }).map((ep) => {
-                    return (
-                        <option key={ep.id} >
-                        <p>{ep.name}</p>
+                <select>
+                    {filterEpisodes(mapArray, props.searchTerm).map((ep) => (
+                        <option key={ep.id}>
+                            {ep.name} ({ep.id})
                         </option>
-                    )
-                    })}
-            </select>  */}
+                    ))}
+                </select>
+            </div>
             <div>
                 <p className="displayBar">Displaying {episodeCount.length}/{mapArray.length}</p>
             </div>
