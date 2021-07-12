@@ -21,14 +21,14 @@
     width: 100%;
     flex: 1;
     padding: 10px;
+    max-width: 271px;
 }
 
 .title{
     background-color: #abbfe6;
     text-align: center;
     border-color: yellow;
-    border-width: 10px
-
+    border-width: 10px;
 }
 
 .picture {
@@ -66,4 +66,15 @@
 
 a:hover {
     background-color: lightgrey;
+}
+
+.searchBar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.displayBar {
+    margin-top: 30px;
+    padding-left: 20px;
+    height: 30xp;
 }

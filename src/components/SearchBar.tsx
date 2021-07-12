@@ -1,14 +1,18 @@
 import mapArray from "../episodes.json";
 import {useState} from "react";
+import filterEpisodes from "../utils/filterEpisodes"
 
 interface searchProps {
-    setSearchTerm: React.Dispatch<React.SetStateAction<string>>
+   // setSearchTerm: React.Dispatch<React.SetStateAction<string>>
+    setSearchTerm(term: string): void
+    searchTerm: string
 }
 
 function SearchBar(props: searchProps): JSX.Element {
+    const episodeCount = filterEpisodes(mapArray, props.searchTerm)
 
     return(
-        <div>
+        <div className="searchBar">
             <div>
                 <input 
                     className="input" 
@@ -34,6 +38,9 @@ function SearchBar(props: searchProps): JSX.Element {
                     )
                     })}
             </select>  */}
+            <div>
+                <p className="displayBar">Displaying {episodeCount.length}/{mapArray.length}</p>
+            </div>
         </div>
         )
 

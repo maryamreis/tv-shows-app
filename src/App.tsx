@@ -15,6 +15,7 @@ function App(): JSX.Element {
     <div>
       <Header />
       <SearchBar 
+        searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         />
       <MainContent 
