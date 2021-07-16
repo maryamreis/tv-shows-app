@@ -32,7 +32,7 @@
       "medium": "https://static.tvmaze.com/uploads/images/medium_landscape/49/124859.jpg",
       "original": "https://static.tvmaze.com/uploads/images/original_untouched/49/124859.jpg"
     },
-    "summary": "<p>Corporate sends in a consultant after Michael attempts to imitate a Chris Rock routine. Michael ends up staging his own Diversity Day event.</p>",
+    "summary":null,
     "_links": { "self": { "href": "https://api.tvmaze.com/episodes/47641" } }
   },
   {

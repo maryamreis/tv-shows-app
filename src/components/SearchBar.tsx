@@ -1,12 +1,10 @@
 import mapArray from "../episodes.json";
 import {useState} from "react";
 import filterEpisodes from "../utils/filterEpisodes"
+import { searchProps } from "../Types";
 
-interface searchProps {
-   // setSearchTerm: React.Dispatch<React.SetStateAction<string>>
-    setSearchTerm(term: string): void
-    searchTerm: string
-}
+
+
 
 function SearchBar(props: searchProps): JSX.Element {
     const episodeCount = filterEpisodes(mapArray, props.searchTerm)
@@ -21,12 +19,15 @@ function SearchBar(props: searchProps): JSX.Element {
                     onChange={(event) => {
                         props.setSearchTerm(event.target.value)}}
                 />
-                <select>
-                    {filterEpisodes(mapArray, props.searchTerm).map((ep) => (
-                        <option key={ep.id}>
-                            {ep.name} ({ep.id})
+                <select onChange={(event) => {props.setSearchTerm(event.target.value); console.log(event.target.value)}}>
+                    {mapArray.map((ep) => (
+                        <option key={ep.id} value={ep.name}>
+                            S{ep.season.toString().padStart(2, "0")}E{ep.number.toString().padStart(2, "0")} - {ep.name}
                         </option>
                     ))}
+                    <option value="">
+                        Refresh
+                    </option>
                 </select>
             </div>
             <div>

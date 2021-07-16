@@ -43,7 +43,9 @@
     flex-shrink: 0;
     min-width: 100%;
     /* max-width: 271px; */
-    min-height: 100%
+    min-height: 100%;
+    width: 250px;
+    height: 140px;
 }
 
 
@@ -77,4 +79,8 @@ a:hover {
     margin-top: 30px;
     padding-left: 20px;
     height: 30xp;
+}
+
+.summary {
+    padding-top: 5px;
 }

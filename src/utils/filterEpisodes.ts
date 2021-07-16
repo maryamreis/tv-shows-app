@@ -1,5 +1,7 @@
-import { IEpisode } from "../components/ShowEpisode";
+import { IEpisode } from "../Types";
+
 
 export default function filterEpisodes(mapArray: IEpisode[], searchTerm: string) {
-    return mapArray.filter((ep) => ep.name.toLowerCase().includes(searchTerm.toLowerCase()) || ep.summary.toLowerCase().includes(searchTerm.toLowerCase()));
+    return mapArray.filter((ep) => ep.name.toLowerCase().includes(searchTerm.toLowerCase()) 
+        || ep.summary?.toLowerCase().includes(searchTerm.toLowerCase()));
 } 
