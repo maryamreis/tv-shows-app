@@ -1,5 +1,4 @@
 import mapArray from "../episodes.json";
-import { useState } from "react";
 import filterEpisodes from "../utils/filterEpisodes";
 import { searchProps } from "../Types";
 

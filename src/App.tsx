@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import mapArray from "./episodes.json";
 import MainContent from "./components/MainContent";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
