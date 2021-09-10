@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import react, { useEffect } from "react";
 import MainContent from "./components/MainContent";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -24,7 +24,7 @@ function App(): JSX.Element {
     <div>
       <Header />
       <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      <MainContent searchTerm={searchTerm} />
+      <MainContent searchTerm={searchTerm} episodes={episodes}/>
       <Footer />
     </div>
   );
